@@ -1,0 +1,11 @@
+{
+	"name": "Pool Conexão",
+	"description": "",
+	"version": "1.0.0",
+	"homepage": "",
+	"mainsrc": "./",
+	"projects": [],
+	"dependencies": {
+		"github.com/hashload/horse": "^3.0.1"
+	}
+}

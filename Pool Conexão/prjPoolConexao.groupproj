@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{7A806025-1C0F-45EB-B4FA-E6E906D61A8B}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="PoolConexaoConsole.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="PoolConexaoISAPI.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Client\PoolConexaoCliente.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="PoolConexaoConsole">
+        <MSBuild Projects="PoolConexaoConsole.dproj"/>
+    </Target>
+    <Target Name="PoolConexaoConsole:Clean">
+        <MSBuild Projects="PoolConexaoConsole.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PoolConexaoConsole:Make">
+        <MSBuild Projects="PoolConexaoConsole.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PoolConexaoISAPI">
+        <MSBuild Projects="PoolConexaoISAPI.dproj"/>
+    </Target>
+    <Target Name="PoolConexaoISAPI:Clean">
+        <MSBuild Projects="PoolConexaoISAPI.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PoolConexaoISAPI:Make">
+        <MSBuild Projects="PoolConexaoISAPI.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PoolConexaoCliente">
+        <MSBuild Projects="Client\PoolConexaoCliente.dproj"/>
+    </Target>
+    <Target Name="PoolConexaoCliente:Clean">
+        <MSBuild Projects="Client\PoolConexaoCliente.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PoolConexaoCliente:Make">
+        <MSBuild Projects="Client\PoolConexaoCliente.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="PoolConexaoConsole;PoolConexaoISAPI;PoolConexaoCliente"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="PoolConexaoConsole:Clean;PoolConexaoISAPI:Clean;PoolConexaoCliente:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="PoolConexaoConsole:Make;PoolConexaoISAPI:Make;PoolConexaoCliente:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
