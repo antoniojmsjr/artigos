@@ -7,3 +7,7 @@ Passo a passo para criação de uma API REST em Delphi com publicação no IIS (
 ### Debug ISAPI no IIS com Delphi utilizando Horse
 
 Passo a passo para depuração de uma aplicação ISAPI publicada no IIS (Internet Information Services) com Delphi utilizando o framework Horse. [Visualizar artigo](https://antoniojmsjr.medium.com/debug-isapi-no-iis-com-delphi-utilizando-horse-aa72b402dfc)/[Download](https://github.com/antoniojmsjr/artigos/tree/main/Debug%20ISAPI%20IIS)
+
+### Enviando multipart/form-data com Delphi usando Indy, NetHTTPClient e RESTClient para um servidor Horse
+
+Neste guia, veremos como podemos fazer upload de arquivos e dados para um servidor Horse usando multipart/form-data com Delphi. [Visualizar artigo]()/[Download](https://github.com/antoniojmsjr/artigos/tree/main/MultipartFormData)
