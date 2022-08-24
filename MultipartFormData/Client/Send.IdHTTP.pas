@@ -27,6 +27,8 @@ uses
 
 { TSendIdHTTP }
 
+//https://stackoverflow.com/questions/30292615/striping-out-the-content-type-from-tidmultipartformdatastream
+
 constructor TSendIdHTTP.Create;
 begin
   inherited Create;
@@ -52,11 +54,11 @@ begin
 
   lIdMultiPartFormDataStream := TIdMultiPartFormDataStream.Create;
   try
-    lIdMultiPartFormDataStream.AddFormField('component', 'Indy').ContentType := ' '; //BUG: https://stackoverflow.com/questions/30292615/striping-out-the-content-type-from-tidmultipartformdatastream
+    lIdMultiPartFormDataStream.AddFormField('component', 'Indy').ContentType := ' ';
     lIdMultiPartFormDataStream.AddFormField('foto', EmptyStr, EmptyStr, Foto, 'foto');
     with lIdMultiPartFormDataStream.AddFormField('cadastro', TJson.ObjectToJsonString(Cadastro, [joDateFormatISO8601]), EmptyStr, 'application/json') do
     begin
-      ContentType := ' '; //BUG: https://stackoverflow.com/questions/30292615/striping-out-the-content-type-from-tidmultipartformdatastream
+      ContentType := ' ';
       ContentTransfer:= '8bit';
     end;
     lIdMultiPartFormDataStream.AddFile('perfil', Perfil);
