@@ -10,4 +10,4 @@ Passo a passo para depuração de uma aplicação ISAPI publicada no IIS (Intern
 
 ### Enviando multipart/form-data com Delphi usando Indy, NetHTTPClient e RESTClient
 
-Neste guia, veremos como fazer upload de arquivos e dados com multipart/form-data para um servidor Web Delphi usando o framework Horse. [Visualizar artigo]()/[Download](https://github.com/antoniojmsjr/artigos/tree/main/MultipartFormData)
+Neste guia, veremos como fazer upload de arquivos e dados com multipart/form-data para um servidor Web Delphi usando o framework Horse. [Visualizar artigo](https://antoniojmsjr.medium.com/enviando-multipart-form-data-com-delphi-usando-indy-nethttpclient-e-restclient-1ba74ec4d4c7)/[Download](https://github.com/antoniojmsjr/artigos/tree/main/MultipartFormData)
